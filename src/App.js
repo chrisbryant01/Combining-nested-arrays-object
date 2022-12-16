@@ -7,26 +7,26 @@ const person = {
 };
 
 let combinedArray = [];
-for (let i = 0; i < person.firstName.length; i++) {
-  combinedArray.push(i);
+for ( let i = 0; i < person.firstName.length; i++ ) {
+  combinedArray.push( i );
 }
 
-const personArray = (() => {
+const personArray = ( () => {
   const { firstName, lastName, score } = person;
 
-  return combinedArray.map((i) => {
+  return combinedArray.map( ( i ) => {
     const format = i + 1 + ": " + firstName[i] + " " + lastName[i] + " ";
 
     return (
       <li key={i}>
         <span>{format}</span>
         <span>
-          Score: <strong>{score[i]}</strong>]
+          [Score: <strong>{score[i]}</strong>]
         </span>
       </li>
     );
-  });
-})();
+  } );
+} )();
 
 export default function App() {
   return (
