@@ -3,7 +3,7 @@ import "./styles.css";
 const person = {
   firstName: ["Chris", "John", "Madison", "Todd", "Dale"],
   lastName: ["Bryant", "Bond", "Bryant", "Williamson", "Sparks"],
-  score: [88, 98, 99, 76, 67]
+  score: [88, 98, 99, 76, 67],
 };
 
 let combinedArray = [];
@@ -15,14 +15,14 @@ const personArray = (() => {
   const { firstName, lastName, score } = person;
 
   return combinedArray.map((i) => {
-    const format =
-      i + 1 + ": " + firstName[i] + " " + lastName[i] + " " + "[Score: ";
+    const format = i + 1 + ": " + firstName[i] + " " + lastName[i] + " ";
 
     return (
       <li key={i}>
         <span>{format}</span>
-        <strong>{score[i]}</strong>
-        <span>]</span>
+        <span>
+          Score: <strong>{score[i]}</strong>]
+        </span>
       </li>
     );
   });
