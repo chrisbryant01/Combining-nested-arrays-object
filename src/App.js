@@ -1,6 +1,6 @@
 import "./styles.css";
 
-const person = {
+let person = {
   firstName: ["Chris", "John", "Madison", "Todd", "Dale"],
   lastName: ["Bryant", "Bond", "Bryant", "Williamson", "Sparks"],
   score: [88, 98, 99, 76, 67],
